@@ -36,4 +36,4 @@ jobs:
       - name: installing surge
         run: npm install -g surge
       - name: deploying surge
-        run: surge ./build ugliest-cake_practice_ems.surge.sh --token ${{ secrets.PRACTICE_TOKEN }} 
+        run: surge ./build ugliest-cake_practice_ems.surge.sh --token ${{ secrets.PRACTICE_EMS }} 
