@@ -1,4 +1,6 @@
-export default (state,action) =>{
+import React from 'react'
+
+const AppReducer = (state,action)=>{
     switch(action.type){
         case 'DELETE_TRANSACTION':
             return{
@@ -16,3 +18,4 @@ export default (state,action) =>{
     }
 
 }
+export default AppReducer
