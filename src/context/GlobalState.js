@@ -22,7 +22,7 @@ function deleteTransaction(id){
         payload:id
     })
 }
-function addTransaction(id){
+function addTransaction(transaction){
     dispatch({
         type:'ADD_TRANSACTION',
         payload:transaction
