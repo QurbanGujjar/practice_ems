@@ -1,5 +1,23 @@
 import React, {createContext, useReducer} from 'react'
-import AppReducer from './AppReducer'
+// import AppReducer from './AppReducer'
+export default (state,action) =>{
+    switch(action.type){
+        case 'DELETE_TRANSACTION':
+            return{
+                ...state,
+                transactions:state.transactions.filter(transaction => transaction.id !== action.payload)
+            }
+            case 'ADD_TRANSACTION':
+                return{
+                    ...state,
+                    transactions:[...state.transactions,action.payload]
+                }    
+
+        default:
+            return state;
+    }
+
+}
 
 // Initial state 
 const initialState = {
